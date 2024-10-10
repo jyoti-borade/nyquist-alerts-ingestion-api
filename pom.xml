@@ -11,7 +11,7 @@
 	<groupId>com.hv.nyquist</groupId>
 	<artifactId>nyquist-alerts-ingestion-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<name>nyquist-alerts-ingestion-api</name>
 	<description>nyquist-alerts-ingestion-api microservice</description>
 	<url/>
