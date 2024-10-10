@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: nyquist-alerts-ingestion-api-service
+spec:
+  type: LoadBalancer # You can also use NodePort or ClusterIP based on your setup
+  ports:
+    - port: 8080
+      targetPort: 8080
+  selector:
+    app: nyquist-alerts-ingestion-api

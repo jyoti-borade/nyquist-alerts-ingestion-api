@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nyquist-alerts-ingestion-api-deployment
+  labels:
+    app: nyquist-alerts-ingestion-api
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nyquist-alerts-ingestion-api
+  template:
+    metadata:
+      labels:
+        app: nyquist-alerts-ingestion-api
+    spec:
+      containers:
+        - name: nyquist-alerts-ingestion-api-container
+          image: jbborade/nyquist-alerts-ingestion-api:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8080
+          env:
+            - name: JAVA_OPTS
+              value: "-Xms256m -Xmx512m"
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "500m"
+            limits:
+              memory: "1Gi"
+              cpu: "1"
