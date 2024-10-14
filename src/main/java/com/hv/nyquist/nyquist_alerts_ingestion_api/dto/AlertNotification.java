@@ -5,6 +5,9 @@ import lombok.ToString;
 
 import java.util.List;
 
+/**
+ * @author Jyoti
+ */
 @Data
 @ToString
 public class AlertNotification {
@@ -23,4 +26,8 @@ public class AlertNotification {
     private List<String> alertPolicyNames;
     private List<String> alertConditionNames;
     private String workflowName;
+    private String clusterName;
+    private String deploymentName;
+    private String namespaceName;
+    private String appName;
 }

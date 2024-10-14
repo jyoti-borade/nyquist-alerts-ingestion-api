@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-config
+data:
+  application.properties: |
+    server.port=8080
+    elasticsearch.host=localhost
+    elasticsearch.port=9200
+    elasticsearch.username=elastic-username
+    elasticsearch.password=password-password
+    elasticsearch.ssl.enabled=false
+    elasticsearch.alta-alert.index-name=alta_alerts_new

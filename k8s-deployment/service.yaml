@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: nyquist-alerts-ingestion-api-service
 spec:
-  type: LoadBalancer # You can also use NodePort or ClusterIP based on your setup
+  type: LoadBalancer
   ports:
     - port: 80
       targetPort: 8080

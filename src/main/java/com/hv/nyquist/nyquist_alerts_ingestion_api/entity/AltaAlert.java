@@ -6,6 +6,9 @@ import lombok.ToString;
 import java.sql.Timestamp;
 import java.util.Map;
 
+/**
+ * @author Jyoti
+ */
 @Data
 @ToString
 public class AltaAlert {

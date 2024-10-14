@@ -6,6 +6,9 @@ import org.springframework.stereotype.Component;
 
 import java.sql.Timestamp;
 
+/**
+ * @author Jyoti
+ */
 @Component
 public class AlertMapper {
     public static AltaAlert mapToAltaAlert(AlertNotification alertNotification) {
@@ -49,7 +52,10 @@ public class AlertMapper {
         }
 
         // Mapping workflowName (custom field like categoryType or service)
-        altaAlert.setService(alertNotification.getWorkflowName());
+        altaAlert.setCluster(alertNotification.getClusterName());
+        altaAlert.setDeployment(alertNotification.getDeploymentName());
+        altaAlert.setNamespace(alertNotification.getNamespaceName());
+        altaAlert.setService(alertNotification.getAppName());
 
         return altaAlert;
     }

@@ -24,5 +24,9 @@
     "condition1",
     "condition2"
   ],
-  "workflowName": "DBA Team workflow"
+  "workflowName": "DBA Team workflow",
+  "clusterName": "test-cluster",
+  "deploymentName": "app-service-deployment",
+  "namespaceName": "ticket-app",
+  "appName": "travel-service"
 }
