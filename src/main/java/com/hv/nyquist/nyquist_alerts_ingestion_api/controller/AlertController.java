@@ -33,4 +33,12 @@ public class AlertController {
             return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Failed to process the Alert notification from new relic");
         }
     }
+
+    @PostMapping("/newrelic/alertString")
+    public void receiveNewRelicAlertString(@RequestBody String alertNotification) {
+
+        LOGGER.info("alert notification received: " + alertNotification);
+
+    }
+
 }

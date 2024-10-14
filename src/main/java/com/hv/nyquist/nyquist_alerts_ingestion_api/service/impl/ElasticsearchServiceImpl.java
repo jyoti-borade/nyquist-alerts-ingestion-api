@@ -1,7 +1,6 @@
 package com.hv.nyquist.nyquist_alerts_ingestion_api.service.impl;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hv.nyquist.nyquist_alerts_ingestion_api.entity.AltaAlert;
 import com.hv.nyquist.nyquist_alerts_ingestion_api.service.ElasticsearchService;
 import org.elasticsearch.action.index.IndexRequest;
 import org.elasticsearch.action.index.IndexResponse;
@@ -31,11 +30,11 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
     }
 
     @Override
-    public void insertData(String index, AltaAlert altaAlert) throws IOException {
+    public void insertData(String index, Map<String, Object> jsonData) throws IOException {
         try {
-            Map<String, Object> dataMap = objectMapper.convertValue(altaAlert, Map.class);
+            //   Map<String, Object> dataMap = objectMapper.convertValue(jsonData, Map.class);
 
-            IndexRequest request = new IndexRequest(index).source(dataMap);
+            IndexRequest request = new IndexRequest(index).source(jsonData);
 
             IndexResponse response = restHighLevelClient.index(request, RequestOptions.DEFAULT);
 

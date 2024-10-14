@@ -14,10 +14,12 @@ public class AlertNotification {
     private String id;
     private String issueUrl;
     private String title;
+    private List<String> description;
     private String priority;
     private List<String> impactedEntities;
     private int totalIncidents;
     private String state;
+    private String eventState;
     private String trigger;
     private boolean isCorrelated;
     private long createdAt;
@@ -26,8 +28,14 @@ public class AlertNotification {
     private List<String> alertPolicyNames;
     private List<String> alertConditionNames;
     private String workflowName;
-    private String clusterName;
-    private String deploymentName;
-    private String namespaceName;
-    private String appName;
+    private List<String> clusterName;
+    private List<String> deploymentName;
+    private List<String> namespaceName;
+    private List<String> appName;
+    private List<String> containerName;
+    private List<String> podName;
+    private List<String> hostname;
+    private String status;
+    private List<String> metricName;
+    private List<String> metricValue;
 }

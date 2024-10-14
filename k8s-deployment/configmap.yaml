@@ -3,11 +3,10 @@ kind: ConfigMap
 metadata:
   name: app-config
 data:
-  application.properties: |
-    server.port=8080
-    elasticsearch.host=localhost
-    elasticsearch.port=9200
-    elasticsearch.username=elastic-username
-    elasticsearch.password=password-password
-    elasticsearch.ssl.enabled=false
-    elasticsearch.alta-alert.index-name=alta_alerts_new
+  server.port: "8080"
+  elasticsearch.host: "elasticsearch-nyquist.hvreaning.com"
+  elasticsearch.port: "443"
+  elasticsearch.username: "elastic"
+  elasticsearch.password: "Z4jGM04EDE43G852eYKT5q9M"
+  elasticsearch.ssl.enabled: "true"
+  elasticsearch.alta-alert.index-name: "alta_alerts"

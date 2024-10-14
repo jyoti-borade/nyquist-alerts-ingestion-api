@@ -1,10 +1,10 @@
 package com.hv.nyquist.nyquist_alerts_ingestion_api.service;
 
-import com.hv.nyquist.nyquist_alerts_ingestion_api.entity.AltaAlert;
+import java.util.Map;
 
 /**
  * @author Jyoti
  */
 public interface ElasticsearchService {
-    void insertData(String index, AltaAlert altaAlert) throws Exception;
+    void insertData(String index, Map<String, Object> jsonData) throws Exception;
 }

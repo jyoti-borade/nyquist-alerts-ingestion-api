@@ -17,7 +17,7 @@ spec:
       containers:
         - name: nyquist-alerts-ingestion-api-container
           image: jbborade/nyquist-alerts-ingestion-api:latest
-          imagePullPolicy: IfNotPresent
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
@@ -38,14 +38,24 @@ spec:
                   key: elasticsearch.port
             - name: ELASTICSEARCH_USERNAME
               valueFrom:
-                secretKeyRef:
-                  name: app-secrets
+                configMapKeyRef:
+                  name: app-config
                   key: elasticsearch.username
             - name: ELASTICSEARCH_PASSWORD
               valueFrom:
-                secretKeyRef:
-                  name: app-secrets
+                configMapKeyRef:
+                  name: app-config
                   key: elasticsearch.password
+#            - name: ELASTICSEARCH_USERNAME
+#              valueFrom:
+#                secretKeyRef:
+#                  name: app-secrets
+#                  key: elasticsearch.username
+#            - name: ELASTICSEARCH_PASSWORD
+#              valueFrom:
+#                secretKeyRef:
+#                  name: app-secrets
+#                  key: elasticsearch.password
             - name: ELASTICSEARCH_SSL_ENABLED
               valueFrom:
                 configMapKeyRef:
