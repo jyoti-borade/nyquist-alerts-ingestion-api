@@ -18,11 +18,11 @@ public class AlertController {
     AlertService alertService;
 
     @PostMapping("/newrelic/alert")
-    public ResponseEntity<String> receiveNewRelicAlert(@RequestBody AlertNotification alertNotification) {
+    public ResponseEntity<String> receiveNewRelicAlert(@RequestBody String alertNotification) {
 
         System.out.println(" alertNotification: " + alertNotification);
 
-        alertService.processAlertNotification(alertNotification);
+      //  alertService.processAlertNotification(alertNotification);
         // Return a response to New Relic
         return ResponseEntity.ok("Alert processed successfully");
     }
