@@ -31,7 +31,7 @@ public class NewRelicAlertService implements AlertService {
     public void processAlertNotification(AlertNotification alertNotification) throws Exception {
         Map<String, Object> jsonData = AlertMapper.mapToAltaAlert(alertNotification);
         LOGGER.info("altaAlert json: " + jsonData);
-        elasticsearchService.insertData(altaAlertIndexName, jsonData);
+        elasticsearchService.insertData(altaAlertIndexName, alertNotification.getId(), jsonData);
         LOGGER.info("Alert data inserted successfully in index : " + altaAlertIndexName);
     }
 }

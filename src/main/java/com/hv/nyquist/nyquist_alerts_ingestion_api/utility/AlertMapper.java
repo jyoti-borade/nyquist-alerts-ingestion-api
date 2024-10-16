@@ -32,7 +32,10 @@ public class AlertMapper {
         jsonData.put("source_node_id", null);
         jsonData.put("source_node_ip", null);
 
-        // jsonData.put("tenant_id", alertNotification.getTenant_id());
+        String tenantId = "opis";
+
+        jsonData.put("tenant_id", tenantId);
+
         jsonData.put("source_node_fqdn", null);
         jsonData.put("source_node_datacenter", null);
         jsonData.put("source_node_type", null);
@@ -67,19 +70,20 @@ public class AlertMapper {
 
         jsonData.put("category_type", "NewRelicAlert");
 
-        String unqKey = ((alertNotification.getContainerName() != null && !alertNotification.getContainerName().isEmpty()) ? alertNotification.getContainerName().get(0) : "") + "_" + ((alertNotification.getPodName() != null && !alertNotification.getPodName().isEmpty()) ? alertNotification.getPodName().get(0) : "") + "_" + ((alertNotification.getHostname() != null && !alertNotification.getHostname().isEmpty()) ? alertNotification.getHostname().get(0) : "") + "_" + ((alertNotification.getNamespaceName() != null && !alertNotification.getNamespaceName().isEmpty()) ? alertNotification.getNamespaceName().get(0) : "") + "_" + ((alertNotification.getClusterName() != null && !alertNotification.getClusterName().isEmpty()) ? alertNotification.getClusterName().get(0) : "");
+        String unqKey = ((alertNotification.getContainerName() != null && !alertNotification.getContainerName().isEmpty()) ? alertNotification.getContainerName().get(0) : "") + "_" + ((alertNotification.getPodName() != null && !alertNotification.getPodName().isEmpty()) ? alertNotification.getPodName().get(0) : "") + "_" + ((alertNotification.getHostname() != null && !alertNotification.getHostname().isEmpty()) ? alertNotification.getHostname().get(0) : "") + "_" + ((alertNotification.getNamespaceName() != null && !alertNotification.getNamespaceName().isEmpty()) ? alertNotification.getNamespaceName().get(0) : "") + "_" + ((alertNotification.getClusterName() != null && !alertNotification.getClusterName().isEmpty()) ? alertNotification.getClusterName().get(0) : "") + "_" + tenantId;
 
         jsonData.put("category_key", unqKey);
 
         //  jsonData.put("threshold_value", value_at_threshold);
 
-       // jsonData.put("triggered_value", (alertNotification.getMetricValue() != null && !alertNotification.getMetricValue().isEmpty()) ? alertNotification.getMetricValue().get(0) : null);
+        // jsonData.put("triggered_value", (alertNotification.getMetricValue() != null && !alertNotification.getMetricValue().isEmpty()) ? alertNotification.getMetricValue().get(0) : null);
 
         jsonData.put("false_positive", null);
         jsonData.put("comments", null);
         jsonData.put("false_positive_comments", null);
 
-        jsonData.put("status", alertNotification.getStatus());
+        // jsonData.put("status", alertNotification.getStatus());
+        jsonData.put("status", "New");
 
         jsonData.put("cluster", (alertNotification.getClusterName() != null && !alertNotification.getClusterName().isEmpty()) ? alertNotification.getClusterName().get(0) : null);
 
