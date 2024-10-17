@@ -32,8 +32,6 @@ public class ElasticsearchServiceImpl implements ElasticsearchService {
     @Override
     public void insertData(String index, String id, Map<String, Object> jsonData) throws IOException {
         try {
-            //   Map<String, Object> dataMap = objectMapper.convertValue(jsonData, Map.class);
-
             IndexRequest request = new IndexRequest(index).id(id).source(jsonData);
 
             IndexResponse response = restHighLevelClient.index(request, RequestOptions.DEFAULT);
