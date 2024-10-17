@@ -24,9 +24,9 @@ public class AlertController {
     @PostMapping("/newrelic/alert")
     public ResponseEntity<String> receiveNewRelicAlert(@RequestBody AlertNotification alertNotification) {
 
-        LOGGER.info("alert notification received with status : {} and alertData {} ", alertNotification.getStatus(), alertNotification);
+        LOGGER.info("alert notification received with state : {} and alertData {} ", alertNotification.getState(), alertNotification);
         try {
-            if (alertNotification.getStatus().equals("OPEN")) {
+            if (alertNotification.getState().equals("ACTIVATED")) {
                 alertService.processAlertNotification(alertNotification);
             }
             return ResponseEntity.ok("Alert notification from new relic processed successfully");
