@@ -1,4 +1,4 @@
-package com.hv.nyquist.nyquist_alerts_ingestion_api.dto;
+package com.hd.nyquist.alertsingestion.dto;
 
 import lombok.Data;
 import lombok.ToString;

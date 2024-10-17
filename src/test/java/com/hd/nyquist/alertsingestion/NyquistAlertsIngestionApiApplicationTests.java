@@ -1,4 +1,4 @@
-package com.hv.nyquist.nyquist_alerts_ingestion_api;
+package com.hd.nyquist.alertsingestion;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

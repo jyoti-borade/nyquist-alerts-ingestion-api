@@ -1,7 +1,7 @@
-package com.hv.nyquist.nyquist_alerts_ingestion_api.controller;
+package com.hd.nyquist.alertsingestion.controller;
 
-import com.hv.nyquist.nyquist_alerts_ingestion_api.dto.AlertNotification;
-import com.hv.nyquist.nyquist_alerts_ingestion_api.service.AlertService;
+import com.hd.nyquist.alertsingestion.dto.AlertNotification;
+import com.hd.nyquist.alertsingestion.service.AlertService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
-package com.hv.nyquist.nyquist_alerts_ingestion_api.utility;
+package com.hd.nyquist.alertsingestion.utility;
 
-import com.hv.nyquist.nyquist_alerts_ingestion_api.dto.AlertNotification;
+import com.hd.nyquist.alertsingestion.dto.AlertNotification;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

@@ -1,10 +1,10 @@
-package com.hv.nyquist.nyquist_alerts_ingestion_api.service.impl;
+package com.hd.nyquist.alertsingestion.service.impl;
 
-import com.hv.nyquist.nyquist_alerts_ingestion_api.controller.AlertController;
-import com.hv.nyquist.nyquist_alerts_ingestion_api.dto.AlertNotification;
-import com.hv.nyquist.nyquist_alerts_ingestion_api.service.AlertService;
-import com.hv.nyquist.nyquist_alerts_ingestion_api.service.ElasticsearchService;
-import com.hv.nyquist.nyquist_alerts_ingestion_api.utility.AlertMapper;
+import com.hd.nyquist.alertsingestion.controller.AlertController;
+import com.hd.nyquist.alertsingestion.dto.AlertNotification;
+import com.hd.nyquist.alertsingestion.service.AlertService;
+import com.hd.nyquist.alertsingestion.service.ElasticsearchService;
+import com.hd.nyquist.alertsingestion.utility.AlertMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

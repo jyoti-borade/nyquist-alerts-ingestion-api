@@ -1,6 +1,6 @@
-package com.hv.nyquist.nyquist_alerts_ingestion_api.service;
+package com.hd.nyquist.alertsingestion.service;
 
-import com.hv.nyquist.nyquist_alerts_ingestion_api.dto.AlertNotification;
+import com.hd.nyquist.alertsingestion.dto.AlertNotification;
 
 /**
  * @author Jyoti

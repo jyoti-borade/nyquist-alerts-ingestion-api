@@ -1,4 +1,4 @@
-package com.hv.nyquist.nyquist_alerts_ingestion_api.service;
+package com.hd.nyquist.alertsingestion.service;
 
 import java.util.Map;
 

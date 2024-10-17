@@ -1,4 +1,4 @@
-package com.hv.nyquist.nyquist_alerts_ingestion_api.configuration;
+package com.hd.nyquist.alertsingestion.configuration;
 
 import org.apache.http.HttpHost;
 import org.apache.http.auth.AuthScope;
